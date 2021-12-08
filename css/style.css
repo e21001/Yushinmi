@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+body {
+ font-family: serif;
+ background-color: #000;
+ color: #fff;
+}
+a {
+ text-decoration: none;
+}
+img {
+ max-width: 100%;
+}
+li {
+ list-style: none;
+}
+/* box部分 */
+.box {
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* header部分 */
+header {
+  padding: 25px;
+}
+header img {
+  position: fixed;
+  z-index: 999;
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+}
+/* box部分 */
+.box {
+  background-attachment: fixed;
+}
+.box-rgba {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+/* ナビゲーションバー部分 */
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+  top:0;
+  right: -120%;
+  width: 30%;
+  height: 100vh;/*ナビの高さ*/
+  background:#999;
+  /*動き*/
+  transition: all 1.5s;
+}
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  right: 0;
+}
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;/*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:20%;
+  left:15%;
+  transform: translate(-50%,-50%);
+}
+/*リストのレイアウト設定*/
+#g-nav li{
+  list-style: none;
+  text-align: center;
+  font-size: 25px;
+}
+#g-nav li a{
+  color: #333;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+  position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+  top: 35px;
+  right: 55px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+/*×に変化*/
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: .7;
+  width: 50%;
+}
+.openbtn span:nth-of-type(1) {
+  top:15px;
+}
+.openbtn span:nth-of-type(2) {
+  top:23px;
+}
+.openbtn span:nth-of-type(3) {
+  top:31px;
+}
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+}
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+}
+/* topページ部分 */
+.top-page {
+  text-align: center;
+  margin-top: 15%;
+  opacity: .8;
+}
+.top-page .top-title {
+  font-size: 5rem;
+}
+.top-page .top-sub-title {
+  font-size: 1.5rem;
+  position: relative;
+}
+.arrow-btn {
+  position: absolute;
+  display: inline;
+  bottom: 10%;
+}
+.arrow {
+  border: 1px solid #fff;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 10px;
+  opacity: .5;
+}
+.arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+/* about部分 */
+.about {
+  min-height: 100vh;
+  /* background-image: url(../img/japanese-black.png); */
+  background-color: #0f131e;
+}
+.about .page-title {
+  font-size: 140px;
+  position: relative;
+  opacity: .1;
+}
+.about .about-img {
+  width: 30%;
+  position: relative;
+  margin: 5% 10%;
+}
+.about .about-contents {
+  position: absolute;
+  display: inline;
+  left: 50vw;
+  bottom: -35vw;
+  width: 35%;
+}
+.about .about-contents h3 {
+  position: absolute;
+  top: 6vw;
+  left: 2vw;
+  font-size: 35px;
+}
