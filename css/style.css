@@ -17,6 +17,11 @@ img {
 li {
  list-style: none;
 }
+.page-title {
+  font-size: 140px;
+  position: relative;
+  opacity: .1;
+}
 /* box部分 */
 .box {
   width: 100vw;
@@ -201,7 +206,79 @@ header img {
 }
 .about .about-contents h3 {
   position: absolute;
-  top: 6vw;
+  bottom: 5vw;
   left: 2vw;
   font-size: 35px;
+}
+/* pride部分 */
+.pride {
+  min-height: 100vh;
+  background-color: #0f131e;
+}
+.pride .pride-contents {
+  padding: 5% 5% 0;
+  position: relative;
+}
+.pride .pride-contents h3 {
+  font-size: 35px;
+  position: absolute;
+  bottom: 26vw;
+  left: 10vw;
+}
+.pride-images {
+  display: flex;
+  justify-content: center;
+}
+.pride-images img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  margin: 40px;
+  transition: .5s all;
+}
+.pride-images img:hover {
+  transform:scale(1.1, 1.1);
+  transition: 1s all;
+}
+.pride-text {
+  position: relative;
+}
+.pride-text p {
+  position: absolute;
+  font-size: 65px;
+  bottom: 0vw;
+  text-shadow: 2px 2px 2px grey;
+}
+.pride-text .sumi {
+  left: 1vw;
+}
+.pride-text .fish {
+  left: 30vw;
+}
+.pride-text .view {
+  left: 62vw;
+}
+/* menu部分 */
+.menu {
+  min-height: 100vh;
+  background-color: #0f131e;
+}
+.menu .menu-contents {
+  padding: 0 5%;
+  position: relative;
+}
+.menu .menu-contents h3 {
+  font-size: 35px;
+  position: absolute;
+  bottom: 3vw;
+  left: 8vw;
+}
+.slider {
+  margin-top: 35px;
+}
+.slider img {
+  width: 100%;
+}
+.slider .menu-img {
+  margin-left: 10px;
 }

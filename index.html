@@ -9,6 +9,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   </head>
   <body>
     <div class="box">
@@ -19,7 +22,7 @@
         <div class="top-page">
           <h1 class="top-title">人と繋がる空間</h1>
           <p class="top-sub-title">~和食×沖縄のおいしい料理~</p>
-          <p class="arrow-btn"><a href="#" class="arrow arrow-down"></a><p>
+          <p class="arrow-btn"><a href="#about-nav" class="arrow arrow-down"></a><p>
         </div>
 
         <div class="openbtn"><span></span><span></span><span></span></div>
@@ -28,8 +31,8 @@
           <div id="g-nav-list">
             <ul>
               <li><a href="#">トップページ</a></li>
-              <li><a href="#">吉嶺(ゆしんみ)について</a></li>
-              <li><a href="#">お知らせ</a></li>
+              <li><a href="#about-nav">吉嶺(ゆしんみ)について</a></li>
+              <li><a href="#pride-nav">吉嶺のこだわり</a></li>
               <li><a href="#">メニュー</a></li>
               <li><a href="#">アクセス</a></li>
               <li><a href="#">お問い合わせ</a></li>
@@ -38,7 +41,7 @@
         </nav>
       </div>
     </div>
-    <div class="about">
+    <div class="about" id="about-nav">
       <img class="about-img" src="img/about.JPG" alt="ゆしんみについて">
       <div class="about-contents">
         <h2 class="page-title">About Us</h2>
@@ -47,9 +50,44 @@
       </div>
     </div>
 
+    <div class="pride" id="pride-nav">
+      <div class="pride-contents">
+        <h2 class="page-title">Our Pride</h2>
+        <h3>吉嶺のこだわり</h3>
+        <p>こだわり、ああああああああああああああああああああああああああああああああああああ</p>
+        <div class="pride-images">
+          <img src="img/pride4.JPG" alt="こだわりの写真1">
+          <img src="img/pride5.JPG" alt="こだわりの写真2">
+          <img src="img/pride6.JPG" alt="こだわりの写真3">
+        </div>
+        <div class="pride-text">
+          <p class="sumi">炭焼き</p>
+          <p class="fish">鮮魚</p>
+          <p class="view">景観</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="menu-contents">
+        <h2 class="page-title">Menu</h2>
+        <h3>メニュー</h3>
+        <p>吉嶺のメニューであります<a href="#">もっと見る</a></p>
+      </div>
+      <div class="slider">
+        <div class="menu-img"><img src="img/menu1.JPG" alt="スライド画像"></div>
+        <div class="menu-img"><img src="img/menu2.JPG" alt="スライド画像"></div>
+        <div class="menu-img"><img src="img/menu3.JPG" alt="スライド画像"></div>
+        <div class="menu-img"><img src="img/menu4.JPG" alt="スライド画像"></div>
+        <div class="menu-img"><img src="img/menu5.JPG" alt="スライド画像"></div>
+        <div class="menu-img"><img src="img/menu6.JPG" alt="スライド画像"></div>
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/jquery.bgswitcher.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/yushinmi.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
