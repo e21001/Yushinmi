@@ -22,6 +22,10 @@ li {
   position: relative;
   opacity: .1;
 }
+/* iframe */
+iframe {
+  width: 100%;
+}
 /* box部分 */
 .box {
   width: 100vw;
@@ -42,6 +46,7 @@ header img {
   width: 70px;
   height: 70px;
   border-radius: 30px;
+  opacity: .6;
 }
 /* box部分 */
 .box {
@@ -64,7 +69,8 @@ header img {
   right: -120%;
   width: 30%;
   height: 100vh;/*ナビの高さ*/
-  background:#999;
+  background:#000;
+  opacity: .5;
   /*動き*/
   transition: all 1.5s;
 }
@@ -98,7 +104,7 @@ header img {
   font-size: 25px;
 }
 #g-nav li a{
-  color: #333;
+  color: #fff;
   text-decoration: none;
   padding:10px;
   display: block;
@@ -181,10 +187,9 @@ header img {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-/* about部分 */
+/* About部分 */
 .about {
   min-height: 100vh;
-  /* background-image: url(../img/japanese-black.png); */
   background-color: #0f131e;
 }
 .about .page-title {
@@ -210,10 +215,10 @@ header img {
   left: 2vw;
   font-size: 35px;
 }
-/* pride部分 */
+/* Pride部分 */
 .pride {
-  min-height: 100vh;
   background-color: #0f131e;
+  padding-bottom: 80px;
 }
 .pride .pride-contents {
   padding: 5% 5% 0;
@@ -222,7 +227,7 @@ header img {
 .pride .pride-contents h3 {
   font-size: 35px;
   position: absolute;
-  bottom: 26vw;
+  bottom: 24vw;
   left: 10vw;
 }
 .pride-images {
@@ -230,7 +235,7 @@ header img {
   justify-content: center;
 }
 .pride-images img {
-  width: 30%;
+  width: 27%;
   height: 100%;
   object-fit: cover;
   margin: 40px;
@@ -258,10 +263,10 @@ header img {
 .pride-text .view {
   left: 62vw;
 }
-/* menu部分 */
+/* Menu部分 */
 .menu {
-  min-height: 100vh;
   background-color: #0f131e;
+  padding-bottom: 100px;
 }
 .menu .menu-contents {
   padding: 0 5%;
@@ -281,4 +286,35 @@ header img {
 }
 .slider .menu-img {
   margin-left: 10px;
+}
+/* Access部分 */
+.access {
+  background-color: #0f131e;
+  padding-bottom: 90px;
+}
+.access .access-contents {
+  padding: 0 5%;
+  position: relative;
+}
+.access .access-contents h3 {
+  font-size: 35px;
+  position: absolute;
+  top: 5vw;
+  left: 8vw;
+}
+.access .access-contents .access-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.access .access-contents .detail-letter {
+  width: 30%;
+  padding: 50px;
+  font-size: 18px;
+}
+.access .access-contents .detail-letter .letter-markup {
+  border-bottom: 1px solid #fff;
+}
+.access .access-contents .detail-map {
+  width: 60%;
+  margin: 40px 0;
 }
