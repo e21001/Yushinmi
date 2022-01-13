@@ -21,6 +21,7 @@ li {
   font-size: 140px;
   position: relative;
   opacity: .1;
+  margin-bottom: 0;
 }
 /* iframe */
 iframe {
@@ -72,7 +73,7 @@ header img {
   background:#000;
   opacity: .5;
   /*動き*/
-  transition: all 1.5s;
+  transition: all 1s;
 }
 /*アクティブクラスがついたら位置を0に*/
 #g-nav.panelactive{
@@ -96,6 +97,7 @@ header img {
   top:20%;
   left:15%;
   transform: translate(-50%,-50%);
+  margin-top: 100px;
 }
 /*リストのレイアウト設定*/
 #g-nav li{
@@ -193,7 +195,7 @@ header img {
   background-color: #0f131e;
 }
 .about .page-title {
-  font-size: 140px;
+  font-size: 120px;
   position: relative;
   opacity: .1;
 }
@@ -207,7 +209,7 @@ header img {
   display: inline;
   left: 50vw;
   bottom: -35vw;
-  width: 35%;
+  width: 40%;
 }
 .about .about-contents h3 {
   position: absolute;
@@ -215,10 +217,13 @@ header img {
   left: 2vw;
   font-size: 35px;
 }
+.about .about-contents p {
+  width: 90%;
+}
 /* Pride部分 */
 .pride {
   background-color: #0f131e;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 .pride .pride-contents {
   padding: 5% 5% 0;
@@ -227,12 +232,13 @@ header img {
 .pride .pride-contents h3 {
   font-size: 35px;
   position: absolute;
-  bottom: 24vw;
+  top: 12vw;
   left: 10vw;
 }
 .pride-images {
   display: flex;
   justify-content: center;
+  padding-top: 30px;
 }
 .pride-images img {
   width: 27%;
@@ -258,15 +264,42 @@ header img {
   left: 1vw;
 }
 .pride-text .fish {
-  left: 30vw;
+  left: 31vw;
 }
 .pride-text .view {
-  left: 62vw;
+  left: 61vw;
+}
+/* pride-page-detail部分 */
+.pride-contents ul {
+  margin: 0 70px;
+}
+.pride-contents ul li {
+  display: flex;
+  margin-top: 80px;
+}
+.pride-contents ul li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.pride-contents ul li img {
+  width: 40%;
+  padding: 0 30px;
+  border-radius: 42px;
+}
+.pride-explain h4 {
+  font-size: 40px;
+}
+.pride-explain p {
+  font-size: 23px;
+  opacity: .6;
+}
+.back-to-prev {
+  text-align: center;
+  margin-top: 30px;
 }
 /* Menu部分 */
 .menu {
   background-color: #0f131e;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .menu .menu-contents {
   padding: 0 5%;
@@ -279,7 +312,7 @@ header img {
   left: 8vw;
 }
 .slider {
-  margin-top: 35px;
+  margin-top: 65px;
 }
 .slider img {
   width: 100%;
@@ -287,10 +320,59 @@ header img {
 .slider .menu-img {
   margin-left: 10px;
 }
+/* faq部分 */
+.faq {
+  background-color: #0f131e;
+  padding-bottom: 150px;
+}
+.faq .faq-contents {
+  padding: 0 5%;
+  position: relative;
+}
+.faq .faq-contents h3 {
+  font-size: 35px;
+  position: absolute;
+  top: 7vw;
+  left: 7vw;
+}
+.faq .faq-contents .qa-list p {
+  margin: 0;
+}
+.faq .faq-contents .qa-list .qa-item {
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+  width: 75%;
+  margin: 0 auto;
+}
+.qa {
+  position: relative;
+  cursor: pointer;
+}
+.qa::after {
+  content: "";
+	display: inline-block;
+	position: absolute;
+	top: 45%;
+	right: 30px;
+	width: 10px;
+	height: 10px;
+	border-right: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	transform: translateY(-50%) rotate(45deg);
+	transition: .3s;
+}
+.qa.open:after {
+  transform: rotate(225deg);
+}
+.faq .faq-contents .qa-list .ans {
+  display: none;
+  color: yellow;
+}
+
 /* Access部分 */
 .access {
   background-color: #0f131e;
-  padding-bottom: 90px;
+  padding-bottom: 70px;
 }
 .access .access-contents {
   padding: 0 5%;
@@ -299,7 +381,7 @@ header img {
 .access .access-contents h3 {
   font-size: 35px;
   position: absolute;
-  top: 5vw;
+  top: 7vw;
   left: 8vw;
 }
 .access .access-contents .access-detail {
@@ -317,4 +399,12 @@ header img {
 .access .access-contents .detail-map {
   width: 60%;
   margin: 40px 0;
+}
+footer {
+  background-color: #0f131e;
+  border-top: 1px solid #fff;
+}
+footer p {
+  text-align: center;
+  padding: 20px 0;
 }

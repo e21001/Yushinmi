@@ -1,6 +1,6 @@
 $(".box").bgSwitcher({
     images: ['img/bg1.JPG','img/bg2.JPG','img/bg3.JPG', 'img/bg4.JPG', 'img/bg5.JPG'],
-    interval: 4000,
+    interval: 3000,
     loop: true,
     shuffle: true,
     effect: "fade",
@@ -64,3 +64,10 @@ $('.slider').slick({
       }
     ]
   });
+
+$('.qa').on('click', function () {
+  $(this).next().slideToggle();
+  $(this).toggleClass('open');
+  $('.qa').not(this).removeClass('open');
+  $('.qa').not($(this)).next('.ans').slideUp();
+})
