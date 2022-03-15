@@ -18,7 +18,7 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
     $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
 });
 
-let effect_pos = 150; // 画面下からどの位置でフェードさせるか(px)
+let effect_pos = 100; // 画面下からどの位置でフェードさせるか(px)
 const effect_move = 50; // どのぐらい要素を動かすか(px)
 const effect_time = 3000; // エフェクトの時間(ms) 1秒なら1000
 

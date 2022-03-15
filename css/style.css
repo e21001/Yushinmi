@@ -7,6 +7,7 @@ body {
  font-family: serif;
  background-color: #000;
  color: #fff;
+ margin: 0;
 }
 a {
  text-decoration: none;
@@ -37,6 +38,10 @@ iframe {
   justify-content: center;
   overflow: hidden;
 }
+/* そばページ部分 */
+.soba-box {
+  height: auto;
+}
 /* header部分 */
 header {
   padding: 25px;
@@ -61,7 +66,7 @@ header img {
 }
 /* ナビゲーションバー部分 */
 /*========= ナビゲーションのためのCSS ===============*/
-#g-nav{
+#g-nav {
   /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
   position:fixed;
   z-index: 999;
@@ -76,11 +81,11 @@ header img {
   transition: all 1s;
 }
 /*アクティブクラスがついたら位置を0に*/
-#g-nav.panelactive{
+#g-nav.panelactive {
   right: 0;
 }
 /*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list{
+#g-nav.panelactive #g-nav-list {
   /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
   z-index: 999;
@@ -189,6 +194,52 @@ header img {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+/* そば部分 */
+/* そばheader部分 */
+.soba-header {
+  background-image: url('../img/soba-image/sky2.png');
+  height: 80px;
+}
+.soba-header h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  opacity: .6;
+}
+/* そばページtop部分 */
+.soba-top {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+.soba-top img {
+  width: 350px;
+}
+.soba-title {
+  margin: 50px 0;
+}
+.soba-title h2 {
+  font-size: 3vw;
+  border-bottom: 1px solid red;
+}
+.soba-title p {
+  font-size: 20px;
+}
+.soba-title .soba-menu  {
+  margin-top: 45px;
+}
+.soba-title .soba-menu li {
+  list-style: circle;
+  font-size: 20px;
+}
+.soba-to-prev {
+  background-color: #fff;
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+}
 /* About部分 */
 .about {
   min-height: 100vh;
@@ -213,7 +264,7 @@ header img {
 }
 .about .about-contents h3 {
   position: absolute;
-  bottom: 5vw;
+  bottom: 80px;
   left: 2vw;
   font-size: 35px;
 }
@@ -232,7 +283,7 @@ header img {
 .pride .pride-contents h3 {
   font-size: 35px;
   position: absolute;
-  top: 12vw;
+  top: 170px;
   left: 10vw;
 }
 .pride-images {
@@ -269,37 +320,49 @@ header img {
 .pride-text .view {
   left: 61vw;
 }
-/* pride-page-detail部分 */
-.pride-contents ul {
+/* pride-page部分 */
+.pride-page {
+  background-color: #0f131e;
+}
+.pride-page .pride-contents .page-title {
+  padding: 20px;
+}
+.pride-page .pride-contents h3 {
+  padding-left: 20px;
+  margin-top: -30px;
+}
+.pride-page .pride-contents ul {
   margin: 0 70px;
 }
-.pride-contents ul li {
+.pride-page .pride-contents ul li {
   display: flex;
   margin-top: 80px;
 }
-.pride-contents ul li:nth-child(even) {
+.pride-page .pride-contents ul li:nth-child(even) {
   flex-direction: row-reverse;
 }
-.pride-contents ul li img {
+.pride-page .pride-contents ul li img {
   width: 40%;
   padding: 0 30px;
   border-radius: 42px;
 }
-.pride-explain h4 {
-  font-size: 40px;
+.pride-page .pride-explain h4 {
+  font-size: 60px;
+  text-shadow: 2px 2px 2px grey;
 }
-.pride-explain p {
+.pride-page .pride-explain p {
   font-size: 23px;
   opacity: .6;
 }
-.back-to-prev {
+.pride-page .back-to-prev {
   text-align: center;
-  margin-top: 30px;
+  margin: 30px 0 0 0;
+  padding-bottom: 20px;
 }
 /* Menu部分 */
 .menu {
   background-color: #0f131e;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 .menu .menu-contents {
   padding: 0 5%;
@@ -308,7 +371,7 @@ header img {
 .menu .menu-contents h3 {
   font-size: 35px;
   position: absolute;
-  bottom: 3vw;
+  bottom: 40px;
   left: 8vw;
 }
 .slider {
@@ -320,6 +383,30 @@ header img {
 .slider .menu-img {
   margin-left: 10px;
 }
+/* menuページ部分 */
+.menu-page {
+  background-color: #0f131e;
+}
+.menu-page .menu-contents {
+  padding: 20px;
+}
+.menu-page .menu-details {
+  padding: 0 130px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu-page .menu-details .menu-explain {
+  margin-top: 20px;
+  width: 29%;
+}
+.menu-page .back-to-prev {
+  margin: 30px 0 0 0;
+  padding-bottom: 30px;
+}
+/* .menu-details .menu-explain img {
+  width: 29%;
+} */
 /* faq部分 */
 .faq {
   background-color: #0f131e;
@@ -332,7 +419,7 @@ header img {
 .faq .faq-contents h3 {
   font-size: 35px;
   position: absolute;
-  top: 7vw;
+  top: 100px;
   left: 7vw;
 }
 .faq .faq-contents .qa-list p {
@@ -381,7 +468,7 @@ header img {
 .access .access-contents h3 {
   font-size: 35px;
   position: absolute;
-  top: 7vw;
+  top: 100px;
   left: 8vw;
 }
 .access .access-contents .access-detail {
@@ -396,10 +483,14 @@ header img {
 .access .access-contents .detail-letter .letter-markup {
   border-bottom: 1px solid #fff;
 }
+.access .access-contents .detail-letter .access-detail-explain {
+  font-size: 16px;
+}
 .access .access-contents .detail-map {
   width: 60%;
   margin: 40px 0;
 }
+/* footer部分 */
 footer {
   background-color: #0f131e;
   border-top: 1px solid #fff;
@@ -407,4 +498,384 @@ footer {
 footer p {
   text-align: center;
   padding: 20px 0;
+}
+/* そばページfooter部分 */
+.soba-footer {
+  background-image: url('../img/soba-image/sky2.png');
+}
+/* レスポンシブデザイン タブレット版 */
+@media screen and (max-width: 960px){
+  header img {
+    height: 80px;
+    width: 80px;
+    border-radius: 25px;
+  }
+  /* ボタンのcss */
+  .openbtn {
+    top: 40px;
+    right: 80px;
+  }
+  /* ナビゲーションバー部分 */
+  #g-nav {
+    width: 40%;
+    opacity: .7;
+  }
+  #g-nav ul {
+    left: 19%;
+  }
+  #g-nav li {
+    font-size: 25px;
+  }
+  /* top部分 */
+  .top-page {
+    margin-top: 50%;
+  }
+  .top-page .top-title {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+  /* 矢印部分 */
+  .arrow {
+    border-width: 0 3px 3px 0;
+  }
+  /* そば部分 */
+  /* そばページtop部分 */
+  .soba-top {
+    padding: 130px 20px;
+  }
+  /* そばページtop部分 */
+  .soba-top {
+    padding: 20px;
+    display: block;
+  }
+  .soba-title {
+    margin: 20px 0;
+    border-bottom: 1px solid red;
+  }
+  .soba-title h2 {
+    font-size: 20px;
+  }
+  .soba-title p {
+    font-size: 15px;
+  }
+  .soba-title .soba-menu li {
+    font-size: 15px;
+  }
+  /* about部分 */
+  .about {
+    min-height: 35vh;
+  }
+  .about .about-img {
+    width: 35%;
+    margin: 0 30px;
+    margin-top: 35px;
+  }
+  .about .page-title {
+    font-size: 60px;
+  }
+  .about .about-contents {
+    bottom: -40vw;
+    width: 50%;
+  }
+  .about .about-contents h3 {
+    font-size: 20px;
+    bottom: 100px;
+  }
+  .about .about-contents p {
+    width: 90%;
+    font-size: 15px;
+    padding-top: 15px;
+  }
+  /* pride部分 */
+  .pride .pride-contents .page-title {
+    font-size: 60px;
+  }
+  .pride .pride-contents h3 {
+    font-size: 20px;
+    top: 72px;
+  }
+  .pride .pride-contents .pride-letter {
+    font-size: 15px;
+    margin: 5px;
+  }
+  .pride-images {
+    padding-top: 0;
+  }
+  .pride-images img {
+    margin: 15px;
+  }
+  .pride .pride-contents .pride-text p {
+    top: -41px;
+    font-size: 25px;
+  }
+  /* pride-page部分 */
+  .pride-page .pride-contents .page-title {
+    font-size: 140px;
+  }
+  .pride-page .pride-contents ul li {
+    margin-top: 45px;
+  }
+  .pride-page .pride-contents ul li img {
+    height: 100%;
+    margin-right: 20px;
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  .pride-page .pride-explain h4 {
+    font-size: 50px;
+  }
+  .pride-page .pride-explain p {
+    font-size: 18px;
+  }
+  /* menu部分 */
+  .menu .menu-contents .page-title {
+    font-size: 60px;
+  }
+  .menu .menu-contents h3 {
+    font-size: 20px;
+    bottom: 31px;
+  }
+  .menu .menu-contents p {
+    font-size: 15px;
+    margin: 5px;
+  }
+  .slider {
+    margin-top: 20px;
+  }
+  /* menuページ部分 */
+  .menu-page .menu-contents h3 {
+    margin-top: -15px;
+  }
+  .menu-page .menu-details {
+    padding: 0 70px;
+  }
+  .menu-page .back-to-prev {
+    margin: 30px 0 0 0;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  /* faq部分 */
+  .faq {
+    padding-bottom: 50px;
+  }
+  .faq .faq-contents .page-title {
+    font-size: 60px;
+  }
+  .faq .faq-contents h3 {
+    font-size: 20px;
+    top: 36px;
+  }
+  .faq .faq-contents .qa-list {
+    margin-top: 10px;
+  }
+  .faq .faq-contents .qa-list .qa-item {
+    padding: 15px;
+    font-size: 15px;
+  }
+  .qa::after {
+    right: 10px;
+  }
+  /* access部分 */
+  .access {
+    padding-bottom: 5px;
+  }
+  .access .access-contents .page-title {
+    font-size: 60px;
+  }
+  .access .access-contents h3 {
+    font-size: 20px;
+    top: 40px;
+  }
+  .access .access-contents .access-detail {
+    display: block;
+  }
+  .access .access-contents .detail-letter {
+    width: 100%;
+    padding: 30px 60px;
+    font-size: 20px;
+  }
+  .access .access-contents .detail-letter p {
+    margin-bottom: 10px;
+  }
+  .access .access-contents .detail-letter .access-detail-explain {
+    font-size: 15px;
+  }
+  .access .access-contents .detail-map {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* footer部分 */
+  footer p {
+    font-size: 20px;
+  }
+}
+/* レスポンシブデザイン スマートフォン版 */
+@media screen and (max-width: 480px){
+  header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+  }
+  /* ボタンのcss */
+  .openbtn {
+    top: 25px;
+    right: 45px;
+  }
+  /* ナビゲーションバー部分 */
+  #g-nav {
+    width: 45%;
+    opacity: .7;
+  }
+  #g-nav li {
+    font-size: 13px;
+  }
+  /* top部分 */
+  .top-page {
+    margin-top: 60%;
+  }
+  .top-page .top-title {
+    font-size: 15px;
+  }
+  /* そば部分 */
+  /* そばheader部分 */
+  .soba-header {
+    height: 40px;
+  }
+  .soba-header h1 {
+    font-size: 30px;
+  }
+  /* about部分 */
+  .about .page-title {
+    font-size: 30px;
+  }
+  .about .about-contents {
+    bottom: -60vw;
+    width: 50%;
+  }
+  .about .about-contents h3 {
+    font-size: 13px;
+    bottom: 100px;
+  }
+  .about .about-contents p {
+    width: 90%;
+    font-size: 8px;
+    padding-top: 30px;
+  }
+  /* pride部分 */
+  .pride .pride-contents .page-title {
+    font-size: 30px;
+  }
+  .pride .pride-contents h3 {
+    font-size: 13px;
+    top: 34px;
+  }
+  .pride .pride-contents .pride-letter {
+    font-size: 8px;
+    margin: 5px;
+  }
+  .pride .pride-contents .pride-text p {
+    top: -41px;
+  }
+  .pride-images img {
+    margin: 10px;
+  }
+  /* pride-page部分 */
+  .pride-page .pride-contents .page-title {
+    font-size: 60px;
+  }
+  .pride-page .pride-contents h3 {
+    font-size: 20px;
+    padding-left: 40px;
+  }
+  .pride-page .pride-contents ul {
+    margin: 0 20px;
+  }
+  .pride-page .pride-contents ul li {
+    margin-top: 20px;
+  }
+  .pride-page .pride-contents ul li img {
+    height: 100%;
+    margin-left: 10px;
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  .pride-page .pride-explain h4 {
+    font-size: 30px;
+  }
+  .pride-page .pride-explain p {
+    font-size: 10px;
+  }
+  /* menu部分 */
+  .menu .menu-contents .page-title {
+    font-size: 30px;
+  }
+  .menu .menu-contents h3 {
+    font-size: 13px;
+    bottom: 31px;
+  }
+  .menu .menu-contents p {
+    font-size: 8px;
+    margin: 5px;
+  }
+  /* menuページ部分 */
+  .menu-page .menu-contents .page-title {
+    font-size: 50px;
+  }
+  .menu-page .menu-contents h3 {
+    margin-top: -5px;
+    font-size: 20px;
+  }
+  .menu-page .menu-contents p {
+    font-size: 13px;
+  }
+  .menu-page .menu-details {
+    padding: 2px 15px;
+  }
+  .menu-page .menu-details .menu-explain p {
+    font-size: 10px;
+  }
+  .menu-page .back-to-prev {
+    margin: 5px 0 0 0;
+    padding-bottom: 10px;
+  }
+  /* faq部分 */
+  .faq {
+    padding-bottom: 25px;
+  }
+  .faq .faq-contents .page-title {
+    font-size: 30px;
+  }
+  .faq .faq-contents h3 {
+    font-size: 13px;
+    top: 18px;
+  }
+  .faq .faq-contents .qa-list .qa-item {
+    padding: 10px;
+    font-size: 10px;
+  }
+  /* access部分 */
+  .access {
+    padding-bottom: 5px;
+  }
+  .access .access-contents .page-title {
+    font-size: 30px;
+  }
+  .access .access-contents h3 {
+    font-size: 13px;
+    top: 19px;
+  }
+  .access .access-contents .detail-letter {
+    width: 100%;
+    padding: 20px 60px;
+    font-size: 15px;
+  }
+  .access .access-contents .detail-letter .access-detail-explain {
+    font-size: 12px;
+  }
+  /* footer部分 */
+  footer p {
+    font-size: 13px;
+  }
 }
